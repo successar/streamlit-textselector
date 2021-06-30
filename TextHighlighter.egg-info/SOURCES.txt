@@ -1,4 +1,5 @@
 MANIFEST.in
+README.md
 setup.py
 TextHighlighter/__init__.py
 TextHighlighter.egg-info/PKG-INFO
@@ -9,12 +10,12 @@ TextHighlighter.egg-info/top_level.txt
 TextHighlighter/frontend/build/asset-manifest.json
 TextHighlighter/frontend/build/bootstrap.min.css
 TextHighlighter/frontend/build/index.html
-TextHighlighter/frontend/build/precache-manifest.9bda4f554d8711a51dc040cade6d7bac.js
+TextHighlighter/frontend/build/precache-manifest.3aeaf3bf87fda519d032e7f94f30b7f5.js
 TextHighlighter/frontend/build/service-worker.js
 TextHighlighter/frontend/build/static/js/2.5793b5da.chunk.js
 TextHighlighter/frontend/build/static/js/2.5793b5da.chunk.js.LICENSE.txt
 TextHighlighter/frontend/build/static/js/2.5793b5da.chunk.js.map
-TextHighlighter/frontend/build/static/js/main.9e5b74af.chunk.js
-TextHighlighter/frontend/build/static/js/main.9e5b74af.chunk.js.map
+TextHighlighter/frontend/build/static/js/main.70ef2713.chunk.js
+TextHighlighter/frontend/build/static/js/main.70ef2713.chunk.js.map
 TextHighlighter/frontend/build/static/js/runtime-main.b9978a02.js
 TextHighlighter/frontend/build/static/js/runtime-main.b9978a02.js.map

@@ -32,7 +32,10 @@ class TokenItem extends React.Component<any, any> {
     render() {
         if (this.props.token != "$break$") {
             const style = { backgroundColor: this.props.color }
-            return <span onClick={() => this.props.onClick()} style={style}>{this.props.token}{" "}</span>;
+            return <span onClick={() => this.props.onClick()} style={style}
+                dangerouslySetInnerHTML={{ __html: `${this.props.token} ` }}
+            >
+            </span>;
         }
         else {
             return <br />
