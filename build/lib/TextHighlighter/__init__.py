@@ -50,12 +50,14 @@ if not _RELEASE:
         value="Comparison of ranitidine and lansoprazole in short-term low-dose triple therapy for Helicobacter pylori infection.",
     )
 
+    labels = ["O"] * len(text.split())
+
     # Create an instance of our component with a constant `name` arg, and
     # print its output value.
     with st.form(key="No"):
         output = TextHighlighter(
-            tokens=text.split(),
-            labels=["O"] * len(text.split()),
+            tokens=text.split() + ["$break$"] + text.split(),
+            labels=labels + ["None"] + labels,
             colors={"O": "white", "POP": "LightPink", "INT": "LightGreen", "OUT": "LightSkyBlue"},
             display_names={"O": "Other", "POP": "Population", "INT": "Intervention", "OUT": "Outcome"},
         )

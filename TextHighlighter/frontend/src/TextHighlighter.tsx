@@ -30,8 +30,13 @@ const MyToggleButton = withStyles({
 
 class TokenItem extends React.Component<any, any> {
     render() {
-        const style = { backgroundColor: this.props.color }
-        return <span onClick={() => this.props.onClick()} style={style}>{this.props.token}{" "}</span>;
+        if (this.props.token != "$break$") {
+            const style = { backgroundColor: this.props.color }
+            return <span onClick={() => this.props.onClick()} style={style}>{this.props.token}{" "}</span>;
+        }
+        else {
+            return <br />
+        }
     }
 }
 
