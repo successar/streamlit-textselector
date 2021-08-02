@@ -1,10 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import TextHighlighter from "./TextHighlighter"
+import TextSelector from "./TextSelector"
 
 ReactDOM.render(
   <React.StrictMode>
-    <TextHighlighter />
+    <TextSelector />
   </React.StrictMode>,
   document.getElementById("root")
 )

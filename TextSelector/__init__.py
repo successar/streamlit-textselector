@@ -19,11 +19,11 @@ _RELEASE = True
 # best practice.
 
 if not _RELEASE:
-    TextHighlighter = components.declare_component(
+    TextSelector = components.declare_component(
         # We give the component a simple, descriptive name ("my_component"
         # does not fit this bill, so please choose something better for your
         # own component :)
-        "TextHighlighter",
+        "TextSelector",
         # Pass `url` here to tell Streamlit that the component will be served
         # by the local dev server that you run via `npm run start`.
         # (This is useful while your component is in development.)
@@ -35,7 +35,7 @@ else:
     # build directory:
     parent_dir = os.path.dirname(os.path.abspath(__file__))
     build_dir = os.path.join(parent_dir, "frontend/build")
-    TextHighlighter = components.declare_component("TextHighlighter", path=build_dir)
+    TextSelector = components.declare_component("TextSelector", path=build_dir)
 
 
 # Add some test code to play with the component while it's in development.
@@ -44,29 +44,17 @@ else:
 if not _RELEASE:
     import streamlit as st
 
-    st.subheader("Component with constant args")
-    text = st.text_input(
-        label="Text",
-        value="Comparison of ranitidine and lansoprazole in short-term low-dose triple therapy for Helicobacter pylori infection.",
-    )
+    cmap = ["#FF0000", "#00FF00", "#0000FF"]
 
-
-
-    labels = ["O"] * len(text.split())
-
+    text = "Comparison of ranitidine and lansoprazole in short-term low-dose triple therapy for Helicobacter pylori infection."
     text = text.split()
-    text[0] = f"<b>{text[0]}</b>"
 
+    colors = [cmap[i%3] for i in range(len(text))]
     # Create an instance of our component with a constant `name` arg, and
     # print its output value.
-    with st.form(key="No"):
-        output = TextHighlighter(
-            tokens=text + ["$break$"] + text,
-            labels=labels + ["None"] + labels,
-            colors={"O": "white", "POP": "LightPink", "INT": "LightGreen", "OUT": "LightSkyBlue"},
-            display_names={"O": "Other", "POP": "Population", "INT": "Intervention", "OUT": "Outcome"},
-        )
+    output = TextSelector(
+        tokens=text,
+        colors=colors
+    )
 
-        submit = st.form_submit_button("Submit")
-        if submit:
-            st.write(output)
+    st.write(text[output["selected"]])

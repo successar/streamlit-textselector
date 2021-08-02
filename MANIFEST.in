@@ -1,1 +1,1 @@
-recursive-include TextHighlighter/frontend/build *
+recursive-include TextSelector/frontend/build *
