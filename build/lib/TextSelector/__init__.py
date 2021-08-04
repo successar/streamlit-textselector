@@ -54,7 +54,8 @@ if not _RELEASE:
     # print its output value.
     output = TextSelector(
         tokens=text,
-        colors=colors
+        colors=colors,
+        border_colors=["black"] * len(colors)
     )
 
     st.write(text[output["selected"]])

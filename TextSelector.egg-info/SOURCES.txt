@@ -10,12 +10,12 @@ TextSelector.egg-info/top_level.txt
 TextSelector/frontend/build/asset-manifest.json
 TextSelector/frontend/build/bootstrap.min.css
 TextSelector/frontend/build/index.html
-TextSelector/frontend/build/precache-manifest.fb6b227890bd7a0eda995a329e3a3f3b.js
+TextSelector/frontend/build/precache-manifest.288d62dae63fd3d97dfd9b887b9b61c3.js
 TextSelector/frontend/build/service-worker.js
 TextSelector/frontend/build/static/js/2.cd021c8d.chunk.js
 TextSelector/frontend/build/static/js/2.cd021c8d.chunk.js.LICENSE.txt
 TextSelector/frontend/build/static/js/2.cd021c8d.chunk.js.map
-TextSelector/frontend/build/static/js/main.f311331f.chunk.js
-TextSelector/frontend/build/static/js/main.f311331f.chunk.js.map
+TextSelector/frontend/build/static/js/main.6bb4b19a.chunk.js
+TextSelector/frontend/build/static/js/main.6bb4b19a.chunk.js.map
 TextSelector/frontend/build/static/js/runtime-main.6b082060.js
 TextSelector/frontend/build/static/js/runtime-main.6b082060.js.map
